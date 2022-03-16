@@ -46,32 +46,3 @@ public:
 	}
 };
 
-
-
-
-//coba2
-
-//string randomType()
-//{
-//	string type[4] = { "NORMAL", "BOMB", "DYNAMITE", "RUBICK" };
-//	srand(time(0));
-//	int RandIndex = rand() % 4;
-//	return type[RandIndex];
-//}
-
-//void generateRandomTiles(int x, int y, int z)
-//{
-//	string type[4] = { "NORMAL", "BOMB", "DYNAMITE", "RUBICK" };
-//	TileFactory tilefactory;
-//	Tile* tile = tilefactory.getTile(type[z]);
-//	tile->draw();
-//	tile->setCoord(x, y);
-//}
-
-//Tile* generateTiles(int x, int y, string type)
-//{
-//	TileFactory tilefactory;
-//	Tile* tile = tilefactory.getTile(type);
-//	tile->setCoord(x, y);
-//	return tile;
-//}
