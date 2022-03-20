@@ -1,36 +1,36 @@
 #pragma once
 #include "ObjectFactory.h"
-#define xlength 5
-#define ylength 5
+#define panjangx 6
+#define panjangy 6
 
 class BoardClient
 {
 private:
-	Tiles* array[xlength][ylength];
+	Tiles* array[panjangx][panjangy];
 	ObjectFactory objectfactory;
 public:
 	BoardClient()
 	{
-		for (int i = 0; i < xlength; i++)
+		for (int i = 0; i < panjangx; i++)
 		{
-			for (int j = 0; j < ylength; j++)
+			for (int j = 0; j < panjangy; j++)
 			{
 				if ((j + 1 + i) % 2 == 0)
 				{
-					array[i][j] = objectfactory.DapatkanTiles("BOM");
+					array[i][j] = objectfactory.getTiles("BOMB");
 				}
 				else {
-					array[i][j] = objectfactory.DapatkanTiles("ROKCET");
+					array[i][j] = objectfactory.getTiles("ROCKET");
 				}
 			}
 		}
 	}
 	void printBoard()
 	{
-		for (int i = 0; i < xlength; i++)
+		for (int i = 0; i < panjangx; i++)
 		{
 			cout << "| ";
-			for (int j = 0; j < ylength; j++)
+			for (int j = 0; j < panjangy; j++)
 			{
 				if (array[i][j] != NULL)
 					array[i][j]->draw();
@@ -45,4 +45,3 @@ public:
 		array[x][y] = NULL;
 	}
 };
-
