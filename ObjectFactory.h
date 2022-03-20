@@ -4,30 +4,23 @@
 class ObjectFactory
 {
 public:
-	Tiles* DapatkanTiles(string type)
+	Tiles* getTiles(string type)
 	{
-		if (type == " Rubik")
+		if (type == "NORMAL")
 		{
-			return
-				new Rubik();
+			return new OrdinaryTile();
 		}
-
-		else if (type == " Rokcet")
+		else if (type == "BOMB")
 		{
-			return
-				new Rokcet();
+			return new Bomb();
 		}
-
-		else if (type == " Ordinary")
+		else if (type == "ROCKET")
 		{
-			return
-				new OrdinaryTiles();
+			return new Rocket();
 		}
-
-		if (type == " Bom")
+		else if (type == "RUBIC")
 		{
-			return
-				new Bom();
+			return new Rubic();
 		}
 	}
 };
