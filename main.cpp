@@ -1,8 +1,8 @@
-#include "Client.h"
+#include "BoardClient.h"
 
 int main()
 {
-	int a, b;
+	int x, y;
 	BoardClient board;
 	char option = 'y';
 
@@ -10,16 +10,17 @@ int main()
 
 	while (option != 'n')
 	{
-		cout << endl << "Masukkan Angka Koordinat : ";
-		cout << endl << "[A] : "; 
-		cin >> a;
-		cout << "[B] : "; 
-		cin >> b;
+		cout << endl << "Masukkan angka Koordinat : ";
+		cout << endl << "[X] : "; 
+		cin >> x;
+		cout << "[Y] : "; 
+		cin >> y;
 
-		board.use(a, b);
+		board.use(x, y);
 		cout << endl;
 		board.printBoard();
 		cout << endl;
-		cout << "Main Lagi ?"; cin >> option;
+		cout << "Main Lagi?"; 
+		cin >> option;
 	}
-};
+}
